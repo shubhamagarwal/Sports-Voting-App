@@ -220,4 +220,4 @@ export const data = [
 const events = ["TENNIS", "FOOTBALL","ICE_HOCKEY","HANDBALL","SNOOKER"];
 export const randamEvent = events[Math.floor(Math.random() * events.length)];
 
-export const API_PATH = "http://localhost:9997";
+export const API_PATH = "http://localhost:3000";

@@ -66,6 +66,7 @@ export class VoteOptions extends Component {
                 localStorage.setItem('voteRecord', JSON.stringify(allMatchRecord));
                 
             }
+            window.location.reload();
         }
     }
 

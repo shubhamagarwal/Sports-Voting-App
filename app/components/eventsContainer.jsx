@@ -51,7 +51,6 @@ export class SportsEvents extends Component {
   }
 
   render() {
-    console.log(this.state);  
     return (
       <React.Fragment>
         <div className="events-data">

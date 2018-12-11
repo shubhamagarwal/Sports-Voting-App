@@ -13,7 +13,7 @@ var config = {
   },
   devServer: {
     inline: true,
-    port: 9997
+    port: 3000
   },
   module: {
     rules: [
