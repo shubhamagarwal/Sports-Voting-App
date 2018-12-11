@@ -31,19 +31,21 @@ export class VoteOptions extends Component {
     }
 
     getTotalVoteCount() {
-        let allMatchRecord = JSON.parse(localStorage.getItem("voteRecord"));
-        let filterByMatch = allMatchRecord.filter(data => {
-            return data.id === this.props.fields.id;
-        });
-        if (filterByMatch.length) {
-            let val = filterByMatch.reduce(function (previousValue, currentValue) {
-                return {
-                    awayName: previousValue.awayName + currentValue.awayName,
-                    draw: previousValue.draw + currentValue.draw,
-                    homeName: previousValue.homeName + currentValue.homeName
-                }
+        if (localStorage.getItem('voteRecord') !== null) {
+            let allMatchRecord = JSON.parse(localStorage.getItem("voteRecord"));
+            let filterByMatch = allMatchRecord.filter(data => {
+                return data.id === this.props.fields.id;
             });
-            this.setState({ drawCount: val.draw, homeCount: val.homeName, awayCount: val.awayName });
+            if (filterByMatch.length) {
+                let val = filterByMatch.reduce(function (previousValue, currentValue) {
+                    return {
+                        awayName: previousValue.awayName + currentValue.awayName,
+                        draw: previousValue.draw + currentValue.draw,
+                        homeName: previousValue.homeName + currentValue.homeName
+                    }
+                });
+                this.setState({ drawCount: val.draw, homeCount: val.homeName, awayCount: val.awayName });
+            }
         }
     }
 
