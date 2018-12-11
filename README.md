@@ -9,4 +9,4 @@ Steps to run this project:-
 
 3. npm start
 
-4. localhost server will be running at 9997 port
+4. localhost server will be running at 3000 port
