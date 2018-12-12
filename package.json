@@ -5,7 +5,8 @@
   "main": "main.js",
   "scripts": {
     "start": "SET NODE_ENV=development && webpack && webpack-dev-server --hot --output-public-path=/public/",
-    "build": "npm install && node_modules/.bin/webpack"
+    "build": "npm install && node_modules/.bin/webpack",
+    "test": "react-scripts test --env=node"
   },
   "author": "shubham",
   "license": "ISC",
@@ -21,7 +22,9 @@
     "css-loader": "^0.26.4",
     "style-loader": "^0.13.2",
     "url-loader": "^0.5.7",
-    "class-to-classname": "^1.0.1"
+    "class-to-classname": "^1.0.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1"
   },
   "dependencies": {
     "bootstrap": "^4.1.1",
@@ -31,6 +34,7 @@
     "react-router-dom": "^4.3.1",
     "webpack": "^2.2.0",
     "webpack-dev-server": "^2.5.0",
-    "axios": "^0.18.0"
+    "axios": "^0.18.0",
+    "react-scripts": "1.1.4"
   }
 }
