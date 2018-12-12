@@ -10,3 +10,5 @@ Steps to run this project:-
 3. npm start
 
 4. localhost server will be running at 3000 port
+
+5. To run the test case : npm start and then type 'a' to run all test cases
