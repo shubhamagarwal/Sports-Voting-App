@@ -7,12 +7,15 @@ import {SportsEvents} from "../app/components/eventsContainer";
 Enzyme.configure({ adapter: new Adapter() });
 
 describe('SportsEvents Component', () => {
-  const setup = () => shallow(
-    <SportsEvents/>
-  );
-    it('renders the SportsEvents Component', () => {
+  const setup = () => shallow(<SportsEvents/>);
+  it('renders the SportsEvents Component', () => {
     const wrapper = setup();
     expect(wrapper.find('SportsEvents')).toBeDefined();
+  });
+
+  it("ComponentDidMount function to be called", () => {
+    const wrapper = setup();
+    wrapper.instance().componentDidMount();
   });
 
 });
